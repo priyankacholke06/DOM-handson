@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Handson 13</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 style="text-align:center;color:red;text-decoration:underline">DOM</h1>
+    <h3 style="color:blue">Q:1)Write the code to access element which is having id as "text"</h3>
+    <pre style="color:green;font-size:large">
+       
+        <div id="text">hello world</div>
+        <button onclick="myclick()">click here</button>
+        
+    </pre>
+    <h3 style="color:blue">Q:2)Write the code to access element which is having tag as "h1"</h3>
+    <pre >
+        
+ <h1>this is heading</h1>
+ <h3>Ans:
+ let tagName = document.getElementsByTagName("h1");
+ tagName[0].innerText="heading tag"
+ console.log(tagName)
+</h3>
+    </pre>
+
+
+
+    <h3 style="color:blue">Q:3)Write the code to access element which is having class as "box"</h3>
+    <pre >
+<div class="box1">hey there!!</div>
+<h3>
+    Ans:
+    let ClassName = document.getElementsByClassName("box");
+    ClassName.innerText="heyy";
+    console.log(ClassName)
+</h3>
+       
+    </pre>
+    <h3 style="color:blue">Q:4)"&lt;h1&gt;Hello &lt;/h1&gt;
+    Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h3>
+    <pre style="color: tomato;font-size:large">
+        &lt;h1 id="header1"&gt;Hello&lt;/h1&gt;
+
+        &ltscript&gt
+        let heading= document.getElementById("header1");
+        heading.innerText="Hello World";
+        &lt/script&gt
+    </pre>
+    <h3 style="color:blue">Q:5)Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</h3>
+    <div id="flex-box">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+    <button id="flex-function">Change flex direction</button>
+    
+    <h3 style="color:blue">Q:6)What’s the difference between window vs document?</h3>
+    <ul>
+    <li style="color:turquoise"><b>Window</b> is the execution context and global object for that context's JavaScript. It is the top most object and outermost element of the object hierarchy.</li>
+    <br>
+    <li style="color:green"><b>Document</b> contains the DOM, initialized by parsing HTML.Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of the page.</li>
+    </ul>
+    <br>
+    <h3 style="color:blue">Q:7)"&lt;h1&gt;Hello &lt;/h1&gt;
+    Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</h3>
+        <pre style="color:green;font-size:large">
+          
+<h1 id="heading">hello</h1>
+            &ltscript&gt
+            let header=document.getElementById("heading").style.color="red";
+            &lt/script&gt
+        </pre>
+    <h3 style="color:blue">Q:8)Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h3>
+        <pre>
+
+            
+     <p id="header"> Hello World</p>
+     <button id="myBtn">Replace Text</button>
+        
+          
+        </pre>
+        <h3 style="color:blue">Q:9)Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h3>
+        <pre>
+           
+           <h2 id="clock"></h2>
+           
+            function timer(){
+                let times = new Date();
+                let hr = times.getHours();
+                let min = times.getMinutes();
+                let secs = times.getSeconds();
+                console.log(hr, min, secs);
+                document.getElementById("clock").innerHTML = hr+ ":" +min+ ":" +secs;
+               
+              }
+              setInterval(timer, 1000)
+          
+        </pre>
+       
+       <h1> Guess the number</h1>
+       <a href="./index1.html"> Click here to play game</a>
+     <script src="index.js"></script>   
+</body>
+</html>
